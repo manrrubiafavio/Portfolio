@@ -10,5 +10,6 @@ import { skills } from 'src/entities/skills.entity';
   ],
   controllers: [SkillsController],
   providers: [SkillsService]
+  
 })
 export class SkillsModule {}

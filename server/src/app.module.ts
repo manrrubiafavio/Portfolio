@@ -19,14 +19,14 @@ import { LoadDatabaseModule } from './utils/Load_DataBase.module';
     }),
     TypeOrmModule.forRoot({
       type: "postgres",
-      host: process.env.host,
-      port: parseInt(process.env.port),
-      username: process.env.db_username,
-      password: process.env.db_password,
-      database: process.env.database,
+      host: process.env.POSTGRES_HOST,
+      port: parseInt(process.env.POSTGRES_PORT),
+      username: process.env.POSTGRES_USER,
+      password: process.env.POSTGRES_PASSWORD,
+      database: process.env.POSTGRESS_DATABASE,
       entities: ['dist/**/*.entity{.ts,.js}'],
-      synchronize: false,
-      dropSchema: false,
+      synchronize: true,
+      dropSchema: true,
 
 
     }),

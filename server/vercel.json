@@ -1,15 +1,21 @@
 {
-    "functions": {
-      "api/server": {
-        "runtime": "nodejs18.x",
-        "maxDuration": 10,
-        "memory": 128
-      }
-    },
+    "version":2,
+    "builds":[
+        {
+        "src":"src/main.ts",
+        "use":"@vercel/node"
+        }
+    ],
     "routes": [
       {
-        "src": "/api/(.*)",
-        "dest": "/api/server"
+        "src": "/(.*)",
+        "dest": "/src/main.ts",
+        "methods":[
+            "GET",
+            "POST",
+            "PUT",
+            "DELETE"
+        ]
       }
     ]
   }

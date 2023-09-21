@@ -1,0 +1,44 @@
+.divMayor{
+    margin-top: 10rem;
+    display: flex;
+}
+.projectsContainer{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+
+}
+.projectCard{
+    width: fit-content;
+    height: fit-content;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.projectCard h2{
+    color: white;
+}
+.projectCard p{
+    color: white
+}
+
+.linksCont h3 {
+    color: white;
+}
+.linksCont ul {
+    list-style-type: none; 
+    padding: 0; 
+}
+
+
+.linksCont ul li {
+    color: white;
+}
+
+.linksCont ul li a {
+    color: white;
+    text-decoration: none; 
+}
+
+
+.linksCont ul li a:hover {
+    text-decoration: underline; 
+}

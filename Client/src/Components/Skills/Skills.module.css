@@ -1,0 +1,58 @@
+.divMayor{
+    display: contents;
+}
+.divContainer{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+
+}
+.divDownload{
+    display: grid;
+    grid-template-columns: repeat(2, 0.5fr);
+    margin-top: 6.5rem;
+    color:white;
+    height: fit-content;
+    width: fit-content;
+    margin-left: 20%;
+    justify-content: center;  
+
+}
+.divDownload p {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+
+}
+.downloadButton{
+    margin: auto;
+    height: fit-content;
+    width: fit-content;
+
+}
+.downloadButton:hover{
+    background-color: black;
+    color: white;
+}
+.skillCard{
+    display: grid;
+    grid-template-columns: repeat(1,5rem);
+    width: 100%;
+    height: fit-content;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    border-radius: 50%;
+}
+.skillCard h3{
+    padding: 1rem;
+    color: white;
+}
+.skillLogo{
+    width: 5.5rem;
+    height: 5.5rem;
+}
+.skillLevel{
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+
+}

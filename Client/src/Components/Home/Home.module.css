@@ -1,0 +1,48 @@
+.divcontainer{
+    background-color: transparent;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: repeat(2,0.5fr);
+    width: 100%;
+    margin-top: 10rem;
+    color: white;
+    text-align: center;
+
+}
+.textcontainer{
+    width: fit-content;
+
+}
+
+.divcontainer img{
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    position: fixed;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 2);
+    text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.5);
+}
+
+
+.divmayor {
+    background-color: transparent;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 1;
+}
+
+.divnav {
+    display: contents;
+}
+
+.textabout {
+    color: rgb(255, 255, 255);
+    font-size: 32px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    box-shadow: 3px 3px 8px rgba(0,0, 0, 2);
+    padding: 10px;
+    line-height: 1.5;
+    background-color: rgba(0, 0, 0, 0.5);
+    
+}

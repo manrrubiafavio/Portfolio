@@ -23,13 +23,13 @@ import { LoadDatabaseModule } from './utils/Load_DataBase.module';
       port: parseInt(process.env.POSTGRES_PORT),
       username: process.env.POSTGRES_USER,
       password: process.env.POSTGRES_PASSWORD,
-      database: process.env.POSTGRESS_DATABASE,
+      database: process.env.POSTGRES_DATABASE,
       entities: ['dist/**/*.entity{.ts,.js}'],
       ssl: {
         rejectUnauthorized: false, 
       },
-      synchronize: true,
-      dropSchema: true,
+      synchronize: false,
+      dropSchema: false,
 
 
     }),

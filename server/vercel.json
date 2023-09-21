@@ -1,7 +1,7 @@
 {
     "functions": {
       "api/server": {
-        "runtime": "nodejs16",
+        "runtime": "nodejs18.17.1",
         "maxDuration": 10,
         "memory": 128
       }

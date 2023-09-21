@@ -73,14 +73,19 @@ export class LoadDataBase {
             const aboutEntity = this.aboutRepository.create(oneAbout);
             await this.aboutRepository.save(aboutEntity);
         }
+        console.log('ABOUT CARGADO')
         for (const oneContact of contactData){
             const contactEntity = this.contactRepository.create(oneContact);
             await this.contactRepository.save(contactEntity);
         }
+        console.log("CONTACT CARGADO");
+        
         for (const oneProject of projectsData){
             const projectEntity = this.projectsRepository.create(oneProject);
             await this.projectsRepository.save(projectEntity)
         }
+        console.log("Project CARGADO");
+        
         for( const oneSkill of skillsData){
             const skillEntity = this.skillsRepository.create(oneSkill);
             await this.skillsRepository.save(skillEntity);

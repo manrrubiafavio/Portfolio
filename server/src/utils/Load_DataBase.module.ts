@@ -1,4 +1,4 @@
-import { Module } from '@nestjs/common';
+import { Module, OnModuleInit } from '@nestjs/common';
 import { HttpModule } from '@nestjs/axios';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { LoadDataBase } from './firstload';
@@ -15,4 +15,9 @@ import { projects } from '../entities/projects.entity';
   providers: [LoadDataBase],
   exports: [LoadDataBase],
 })
-export class LoadDatabaseModule {}
+export class LoadDatabaseModule implements OnModuleInit{
+  constructor(private readonly firstCharge:LoadDataBase){}
+  onModuleInit() {
+      this.firstCharge.firstLoad();
+  }
+}

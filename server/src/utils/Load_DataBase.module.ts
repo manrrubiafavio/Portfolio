@@ -17,7 +17,7 @@ import { projects } from '../entities/projects.entity';
 })
 export class LoadDatabaseModule implements OnModuleInit{
   constructor(private readonly firstCharge:LoadDataBase){}
-  onModuleInit() {
-      this.firstCharge.firstLoad();
+  async onModuleInit() {
+      await this.firstCharge.firstLoad();
   }
 }

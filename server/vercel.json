@@ -9,7 +9,7 @@
     "routes": [
       {
         "src": "/(.*)",
-        "destination": "build/main.ts",
+        "dest": "build/main.ts",
         "methods":[
             "GET",
             "POST",

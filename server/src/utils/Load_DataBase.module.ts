@@ -15,4 +15,4 @@ import { projects } from '../entities/projects.entity';
   providers: [LoadDataBase],
   exports: [LoadDataBase],
 })
-export class LoadDatabaseModule {}
+export class LoadDatabaseModule{}

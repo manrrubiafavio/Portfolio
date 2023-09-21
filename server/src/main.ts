@@ -8,6 +8,7 @@ async function bootstrap() {
     origin: ['https://www.favio-manrrubia.com.ar',"https://favio-manrrubia.com.ar"],
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true,
+    
   })
   await app.listen(3000);
 }

@@ -1,0 +1,16 @@
+{
+    "functions": {
+      "api/server": {
+        "runtime": "nodejs16",
+        "maxDuration": 10,
+        "memory": 128
+      }
+    },
+    "routes": [
+      {
+        "src": "/api/(.*)",
+        "dest": "/api/server"
+      }
+    ]
+  }
+  

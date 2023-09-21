@@ -25,8 +25,8 @@ import { LoadDatabaseModule } from './utils/Load_DataBase.module';
       password: process.env.POSTGRES_PASSWORD,
       database: process.env.POSTGRESS_DATABASE,
       entities: ['dist/**/*.entity{.ts,.js}'],
-      synchronize: true,
-      dropSchema: true,
+      synchronize: false,
+      dropSchema: false,
 
 
     }),

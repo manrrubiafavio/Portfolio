@@ -48,17 +48,24 @@
 }
 
 @media screen and (max-width: 768px) {
-
-    .textcontainer,
-    .divnav,
-    .divcontainer img,
-    .divcontainer,
-    .textabout {
-        width: 100%;
-        margin: 0;
+    .divcontainer {
+        grid-template-columns: 1fr; 
+        margin-top: 5rem; 
     }
 
-    .divmayor {
-        align-items: flex-start;
+    .textcontainer {
+        width: 100%; 
+    }
+
+    .divcontainer img {
+        position: static; 
+        width: 100%; 
+        height: auto; 
+        box-shadow: none; 
+    }
+
+    .textabout {
+        font-size: 24px; 
+        padding: 5px; 
     }
 }

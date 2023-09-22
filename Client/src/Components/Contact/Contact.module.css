@@ -75,3 +75,53 @@
     color: white;
     text-decoration: none; 
 }
+
+@media screen and (max-width: 768px) {
+    .DivMayor {
+        display: contents;
+    }
+
+    .divForm {
+        margin-left: 0; 
+        width: 100%;
+    }
+
+    .Divcontainer {
+        margin-top: 4rem; 
+        width: 90%; 
+        height: auto; 
+    }
+
+    .labelContainer {
+        justify-content: center; 
+        width: 100%; 
+    }
+
+    .label {
+        background-color: none;
+    }
+
+    .labelContainer input {
+        color: black;
+    }
+
+    .labelContainer p {
+        background-color: none;
+    }
+
+    .inputText {
+        width: 100%; 
+        height: auto;
+    }
+
+    .divButton {
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .divButton button {
+        margin: 1rem 0; 
+        border-radius: 2rem;
+    }
+}

@@ -4,7 +4,8 @@ import { useEffect, useState } from "react";
 import { RootState } from "../../redux/actions-types";
 import Styles from './Projects.module.css';
 import { useSelector } from "react-redux";
-import ReactPlayer from 'react-player';
+import { faYoutube } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 interface Project {
     id: number;
@@ -44,17 +45,10 @@ export default function Projects() {
                     <div key={project.id} className={Styles.projectCard}>
                         <h2>{project.name}</h2>
                         <p>{project.description}</p>
-                        {project.video && (
-                            <ReactPlayer
-                                url={project.video}
-                                width="100%" 
-                                height="100%" 
-                                controls={true} 
-                            />
-                        )}
                         <div className={Styles.linksCont}>
                             <h3>Links:</h3>
                             <ul>
+                                {project.video && <li><a href={project.video}>Video <FontAwesomeIcon icon={faYoutube} /></a></li>}
                                 {project.links.map((link, index) => (
                                     <li key={index}>
                                         <a href={link} target="_blank" rel="noopener noreferrer">

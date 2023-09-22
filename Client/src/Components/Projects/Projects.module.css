@@ -42,3 +42,21 @@
 .linksCont ul li a:hover {
     text-decoration: underline; 
 }
+
+@media screen and (max-width: 768px) {
+    .divMayor {
+        margin-top: 5rem; 
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .projectsContainer {
+        grid-template-columns: repeat(2, 1fr); 
+        grid-gap: 1rem; 
+    }
+
+    .projectCard {
+        width: 100%; 
+        margin-bottom: 1rem; 
+    }
+}

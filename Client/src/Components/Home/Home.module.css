@@ -47,7 +47,7 @@
     
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) and (orientation: portrait){
     .divcontainer {
         grid-template-columns: 1fr; 
         margin-top: 5rem; 

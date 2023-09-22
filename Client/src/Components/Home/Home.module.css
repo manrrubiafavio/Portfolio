@@ -46,3 +46,19 @@
     background-color: rgba(0, 0, 0, 0.5);
     
 }
+
+@media screen and (max-width: 768px) {
+
+    .textcontainer,
+    .divnav,
+    .divcontainer img,
+    .divcontainer,
+    .textabout {
+        width: 100%;
+        margin: 0;
+    }
+
+    .divmayor {
+        align-items: flex-start;
+    }
+}

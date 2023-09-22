@@ -46,11 +46,12 @@ export default function Projects() {
                         {project.video && (
                             <div className={Styles.videoContainer}>
                                 <iframe
-                                    width="560"
-                                    height="315"
+                                    width="400"
+                                    height="225"
                                     src={`${project.video}`}
                                     allowFullScreen
                                     title="Hotel Hunt"
+                                    sandbox="allow-same-origin allow-scripts"
                                 ></iframe>
                             </div>
                         )}

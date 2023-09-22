@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { RootState } from "../../redux/actions-types";
 import Styles from './Projects.module.css';
 import { useSelector } from "react-redux";
+import ReactPlayer from 'react-player';
 
 interface Project {
     id: number;
@@ -44,16 +45,12 @@ export default function Projects() {
                         <h2>{project.name}</h2>
                         <p>{project.description}</p>
                         {project.video && (
-                            <div className={Styles.videoContainer}>
-                                <iframe
-                                    width="400"
-                                    height="225"
-                                    src={`${project.video}`}
-                                    allowFullScreen
-                                    title="Hotel Hunt"
-                                    sandbox="allow-same-origin allow-scripts"
-                                ></iframe>
-                            </div>
+                            <ReactPlayer
+                                url={project.video}
+                                width="100%" 
+                                height="100%" 
+                                controls={true} 
+                            />
                         )}
                         <div className={Styles.linksCont}>
                             <h3>Links:</h3>

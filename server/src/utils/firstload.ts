@@ -6,8 +6,6 @@ import { about } from '../entities/about.entity'
 import { projects } from 'src/entities/projects.entity';
 import { skills } from 'src/entities/skills.entity';
 import { contact } from 'src/entities/contact.entity';
-import { throwError } from 'rxjs';
-
 
 @Injectable()
 export class LoadDataBase {

@@ -59,7 +59,7 @@
 
     .divcontainer img {
         position: static; 
-        width: 100%; 
+        width: auto; 
         height: auto; 
         box-shadow: none; 
     }

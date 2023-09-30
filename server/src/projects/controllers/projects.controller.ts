@@ -14,11 +14,12 @@ export class ProjectsController {
     }
 
     @Post()
-    postProject(@Body('body') body:any){
+    postProject(@Body() body:any){
+        console.log(body)
         return this.projectServ.create(body)
     }
     @Put('/:id')
-    update(@Body('body') body:any, @Param('id') id:number){
+    update(@Body() body:any, @Param() id:number){
         return this.projectServ.updateProject(id,body)
     }
 }

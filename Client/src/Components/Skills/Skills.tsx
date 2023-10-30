@@ -48,19 +48,28 @@ export default function ViewSkills() {
     return (
         <div className={Styles.divMayor}>
             <NavBar />
-            <div className={Styles.divDownload}>
-                <p>{languageState ? "Recuerde seleccionar el idioma a descargar" : "Remember choose your language"}</p>
-                <button className={Styles.downloadButton} onClick={handleDownload}>{languageState ? "Descargar CV" : "Download Resume"}</button>
-            </div>
-            <div className={Styles.divContainer}>
-                {skills.map((skill) => (
-                    <div key={skill.id} className={Styles.skillCard}>
-                        <h3>{skill.name}</h3>
-                        <img src={skill.logo} className={Styles.skillLogo} alt="Logo" />
-                        <h3 className={skill.level}> Level: {skill.level}</h3>
+            {skills.length > 0 ? (
+                <div>
+                    <div className={Styles.divDownload}>
+                        <p>{languageState ? "Recuerde seleccionar el idioma a descargar" : "Remember choose your language"}</p>
+                        <button className={Styles.downloadButton} onClick={handleDownload}>{languageState ? "Descargar CV" : "Download Resume"}</button>
                     </div>
-                ))}
-            </div>
+                    <div className={Styles.divContainer}>
+                        {skills.map((skill) => (
+                            <div key={skill.id} className={Styles.skillCard}>
+                                <h3>{skill.name}</h3>
+                                <img src={skill.logo} className={Styles.skillLogo} alt="Logo" />
+                                <h3 className={skill.level}> Level: {skill.level}</h3>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            ):(
+                <div className={Styles.loadingContainer}>
+                    <div className={Styles.loadingSpinner}></div>
+                    <p>Loading projects...</p>
+                </div>
+            )}
         </div>
     )
 }

@@ -1,20 +1,21 @@
-.divcontainer{
+.divcontainer {
     background-color: transparent;
     background-size: cover;
     display: grid;
-    grid-template-columns: repeat(2,0.5fr);
+    grid-template-columns: repeat(2, 0.5fr);
     width: 100%;
     margin-top: 10rem;
     color: white;
     text-align: center;
 
 }
-.textcontainer{
+
+.textcontainer {
     width: fit-content;
 
 }
 
-.divcontainer img{
+.divcontainer img {
     display: flex;
     width: fit-content;
     height: fit-content;
@@ -35,37 +36,67 @@
     display: contents;
 }
 
+.loadingContainer {
+    align-content: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.loadingSpinner {
+    border: 4px solid rgba(0, 0, 0, 0.3);
+    margin-left: 40%;
+    margin-top: 30%;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
 .textabout {
     color: rgb(255, 255, 255);
     font-size: 32px;
     font-family: Arial, sans-serif;
     text-align: center;
-    box-shadow: 3px 3px 8px rgba(0,0, 0, 2);
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 2);
     padding: 10px;
     line-height: 1.5;
     background-color: rgba(0, 0, 0, 0.5);
-    
+
 }
 
-@media screen and (max-device-width: 768px) and (orientation: portrait){
+@media screen and (max-device-width: 768px) and (orientation: portrait) {
     .divcontainer {
-        grid-template-columns: 1fr; 
-        margin-top: 5rem; 
+        grid-template-columns: 1fr;
+        margin-top: 5rem;
     }
 
     .textcontainer {
-        width: 100%; 
+        width: 100%;
     }
 
     .divcontainer img {
-        position: static; 
-        width: auto; 
-        height: auto; 
-        box-shadow: none; 
+        position: static;
+        width: auto;
+        height: auto;
+        box-shadow: none;
     }
 
     .textabout {
-        font-size: 24px; 
-        padding: 5px; 
+        font-size: 24px;
+        padding: 5px;
     }
+
 }

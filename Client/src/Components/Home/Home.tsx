@@ -38,11 +38,19 @@ export default function Home() {
                 <NavBar />
             </div>
             <div className={Styles.divcontainer}>
-                <div className={Styles.textContainer}>
-                    <h3 className={Styles.textabout}>
-                        {about}
-                    </h3>
-                </div>
+                {about !== '' ? (
+                    <div className={Styles.textContainer}>
+                        <h3 className={Styles.textabout}>
+                            {about}
+                        </h3>
+                    </div>
+                ) : (
+                    <div className={Styles.loadingContainer}>
+                        <div className={Styles.loadingSpinner}></div>
+                        <p>Loading...</p>
+                    </div>
+                )}
+
                 <div className={Styles.imgage}>
                     <img src={foto} alt='Profile/Perfil' />
                 </div>

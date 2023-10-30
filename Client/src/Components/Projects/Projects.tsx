@@ -38,29 +38,43 @@ export default function Projects() {
 
 
     return (
+
         <div className={Styles.divMayor}>
             <NavBar />
-            <div className={Styles.projectsContainer}>
-                {projects.map((project) => (
-                    <div key={project.id} className={Styles.projectCard}>
-                        <h2>{project.name}</h2>
-                        <p>{project.description}</p>
-                        <div className={Styles.linksCont}>
-                            <h3>Links:</h3>
-                            <ul>
-                                {project.video && <li><a href={project.video}>Video <FontAwesomeIcon icon={faYoutube} /></a></li>}
-                                {project.links.map((link, index) => (
-                                    <li key={index}>
-                                        <a href={link} target="_blank" rel="noopener noreferrer">
-                                            {link}
-                                        </a>
-                                    </li>
-                                ))}
-                            </ul>
+            {projects.length > 0 && (
+                <div className={Styles.projectsContainer}>
+                    {projects.map((project) => (
+                        <div key={project.id} className={Styles.projectCard}>
+                            <h2>{project.name}</h2>
+                            <p>{project.description}</p>
+                            <div className={Styles.linksCont}>
+                                <h3>Links:</h3>
+                                <ul>
+                                    {project.video && (
+                                        <li>
+                                            <a href={project.video}>Video <FontAwesomeIcon icon={faYoutube} /></a>
+                                        </li>
+                                    )}
+                                    {project.links.map((link, index) => (
+                                        <li key={index}>
+                                            <a href={link} target="_blank" rel="noopener noreferrer">
+                                                {link}
+                                            </a>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-                ))}
-            </div>
+                    ))}
+                </div>
+            )}
+            {projects.length === 0 && (
+                <div className={Styles.loadingContainer}>
+                    <div className={Styles.loadingSpinner}></div>
+                    <p>Loading projects...</p>
+                </div>
+            )}
         </div>
+
     )
 }

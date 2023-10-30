@@ -8,7 +8,7 @@ import Projects from './Components/Projects/Projects';
 
 function App() {
   useEffect(() => {
-    document.title = 'Favio Manrrubia Portfolio'; // Cambia el título de la pestaña del navegador
+    document.title = 'Favio Manrrubia Portfolio';
   }, []);
   return (
     

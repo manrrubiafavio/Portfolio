@@ -11,6 +11,7 @@ interface Project {
     id: number;
     name: string;
     description: string;
+    photos:string[];
     video?: string;
     links: string[];
 }
@@ -45,6 +46,9 @@ export default function Projects() {
                 <div className={Styles.projectsContainer}>
                     {projects.map((project) => (
                         <div key={project.id} className={Styles.projectCard}>
+                            {project.photos.length > 0 && (
+                                <img src={project.photos[0]} alt="Project img" />
+                            )}
                             <h2>{project.name}</h2>
                             <p>{project.description}</p>
                             <div className={Styles.linksCont}>

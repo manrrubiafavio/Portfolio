@@ -2,15 +2,12 @@ import NavBar from "../NavBar/NavBar";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Styles from './Contact.module.css';
+import Footer from "../Footer/Footer";
 import { RootState } from "../../redux/actions-types";
 import { useSelector } from "react-redux/es/hooks/useSelector";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons'
 import { Toaster, toast } from 'react-hot-toast';
 
 export default function Contact() {
-    const [contactInfo, setContactInfo] = useState({ "id": 0, "phone": 0, "email": "", "whatsapp": "" });
     const Back_Url = process.env.REACT_APP_BACK_URL;
     const languageState = useSelector((state: RootState) => state.language);
     const [buttonstate, setButtonState] = useState(false);
@@ -32,19 +29,7 @@ export default function Contact() {
         },
       };
 
-    useEffect(() => {
-        getContactInfo();
-    }, [])    
-
-    const getContactInfo = async () => {
-        try {
-            const response = await axios.get(`${Back_Url}/contact`)
-            setContactInfo(response.data[0])
-
-        } catch (error:any) {
-            toast.error(error.message)
-        }
-    }
+    
 
     const validation = () => {
         const error = { email: "", text: "" };
@@ -74,7 +59,6 @@ export default function Contact() {
         } else {
             setButtonState(false)
         }
-        console.log("buttonstate:", buttonstate)
     }, [Data, languageState])
 
 
@@ -128,19 +112,7 @@ export default function Contact() {
                 </div>
 
             </div>
-            <footer className={Styles.Footer}>
-                <p>
-                    {languageState ? "Teléfono: " : "Phone: "} <FontAwesomeIcon icon={faPhone} />{contactInfo.phone}
-                </p>
-                <p>
-                    {languageState ? "Correo Electrónico: " : "Email: "} <FontAwesomeIcon icon={faEnvelope} />{contactInfo.email}
-                </p>
-                <p >
-                    <a href={contactInfo.whatsapp} target="_blank" rel="noopener noreferrer">
-                        WhatsApp: <FontAwesomeIcon icon={faWhatsapp} /> {languageState ? "Chatea conmigo " : "Whatsapp me "}
-                    </a>
-                </p>
-            </footer>
+            <Footer  />
         </div>
     )
 }

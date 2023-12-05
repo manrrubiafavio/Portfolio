@@ -1,20 +1,33 @@
 .divMayor{
     margin-top: 10rem;
+    width: 100vw;
     display: flex;
 }
 .projectsContainer{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 2rem;
+    grid-template-columns: repeat(3, 0.3fr);
+    grid-gap: 1rem;
+    justify-self: center;
+    align-self: center;
 
 }
 .projectCard{
     width: fit-content;
     height: fit-content;
     padding:0.5rem;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(2, 3, 26, 0.5);
+    border-radius: 10px;
+}
+.projectCard img{
+    align-self: center;
+    justify-self: center;
+    width: auto;
+    height: 180px;
 }
 .projectCard h2{
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline;
     color: white;
 }
 .projectCard p{

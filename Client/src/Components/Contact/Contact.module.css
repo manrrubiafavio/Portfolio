@@ -1,18 +1,25 @@
 .DivMayor{
-    display: contents;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    padding: 0px;
+    justify-items: center;
 
 }
 .divForm{
     background-color: rgba(0, 0, 0, 0.8);
-    margin-left:25%;
+    padding: 10px;
     width: fit-content;
     height: fit-content;
 }
 .Divcontainer{
+    display: flex;
     margin-top: 8rem;
-    width: 52rem;
-    height: 20rem;
+    width: fit-content;
+    height: fit-content;
     padding: 2rem;
+    align-self: center;
 
 }
 .labelContainer{
@@ -54,31 +61,12 @@
     color: white;
     background-color: black;
 }
-.Footer{
-    margin-top: 1rem;
-    width: 100%;
-    display: inline-flex;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5);
-    justify-items: center;
-}
-.Footer p{
-    font-family:'Segoe UI', Tahoma, Verdana, sans-serif;
-    font-weight: bold;
-    color: white;
-    margin-left: 3rem;
-    margin-right: 3rem;
-}
-.Footer a{
-    font-family:'Segoe UI', Tahoma, Verdana, sans-serif;
-    font-weight: bold;
-    color: white;
-    text-decoration: none; 
-}
 
-@media screen and (max-device-width: 768px) and (orientation: portrait) {
+
+@media screen and (max-width: 768px){
     .DivMayor {
-        display: contents;
+        display: flex;
+        height: 100vh;
     }
 
     .divForm {
@@ -87,9 +75,9 @@
     }
 
     .Divcontainer {
-        margin-top: 4rem; 
-        width: 90%; 
-        height: auto; 
+        justify-content: center;
+        width: 90vw; 
+        height: fit-content; 
     }
 
     .labelContainer {
@@ -112,7 +100,7 @@
 
     .inputText {
         width: 100%; 
-        height: auto;
+        height: 15rem;
     }
 
     .divButton {
@@ -128,5 +116,6 @@
     .Footer{
         display: grid;
         grid-template-columns: repeat(1,1fr);
+        bottom: 0;
     }
 }

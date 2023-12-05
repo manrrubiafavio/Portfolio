@@ -51,7 +51,7 @@ export default function Home() {
                     </div>
                 )}
 
-                <div className={Styles.imgage}>
+                <div className={Styles.image}>
                     <img src={foto} alt='Profile/Perfil' />
                 </div>
             </div>

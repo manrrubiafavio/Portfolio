@@ -1,63 +1,69 @@
 
 .navbutton {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 6rem;
-    height: 3rem;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2rem;
-    margin-right: 1rem; 
-    padding: 0.5rem 1rem; 
-    border-radius: 0.9rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 6rem;
+  height: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  margin-right: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.9rem;
+}
+
+.navbutton:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  background-color: rgb(0, 0, 0);
+  color: white;
+  border-radius: 0.9rem;
+}
+
+.container {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: none;
+  padding-bottom: 1rem;
+}
+
+.Lanbutton {
+  height: 3rem;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.9rem;
+}
+
+.Lanbutton:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  background-color: rgb(0, 0, 0);
+  color: white;
+  border-radius: 0.9rem;
+}
+
+
+@media screen and (max-width: 768px) {
+
+  .navbutton {
+    margin: 0;
+    padding: 0;
   }
-  
-  .navbutton:hover {
-    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-    background-color: rgb(0, 0, 0);
-    color: white;
-    border-radius: 0.9rem;
-  }
-  
-  .container {
-    width: 100%;
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-  }
+
   .Lanbutton {
-    height: 3rem;
-    cursor: pointer;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2rem;
-    padding: 0.5rem 1rem; 
-    border-radius: 0.9rem;
+    margin: 0;
   }
-  
-  .Lanbutton:hover {
-    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-    background-color: rgb(0, 0, 0);
-    color: white;
-    border-radius: 0.9rem;
+
+  .container {
+    align-items: flex-start;
   }
- 
-
-  @media screen and (max-device-width: 768px) and (orientation: portrait) {
-
-    .navbutton,
-    .Lanbutton {
-        width: 100%;
-        margin: 0;
-    }
-
-    .container {
-        align-items: flex-start;
-    }
 }

@@ -1,0 +1,34 @@
+.Footer {
+    display: inline-flex;
+    margin-top: 4.95rem;
+    margin-left: 0;
+    width: 100vw;
+    height: fit-content;
+    color: white;
+    background-color: rgba(0, 0, 0, 1);
+    justify-content: space-around;
+
+}
+
+.Footer p {
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    font-weight: bold;
+    color: white;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+.Footer a {
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+    .Footer {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin-top: 4.95rem;
+    }
+}

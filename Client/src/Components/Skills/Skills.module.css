@@ -1,10 +1,11 @@
 .divMayor{
-    display: contents;
+    display: flex;
+    flex-direction: column;
 }
 .divContainer{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 2rem;
+    grid-gap: 1rem;
 
 }
 .divDownload{
@@ -15,7 +16,8 @@
     height: fit-content;
     width: fit-content;
     margin-left: 20%;
-    justify-content: center;  
+    justify-content: center; 
+    align-content: center; 
 
 }
 .divDownload p {
@@ -34,24 +36,26 @@
     color: white;
 }
 .skillCard{
-    display: grid;
-    grid-template-columns: repeat(1,5rem);
+    display: flex;
+    flex-direction: column;
     width: 100%;
     height: fit-content;
     background-color: rgba(0, 0, 0, 0.7);
-    justify-content: center;
     border-radius: 50%;
 }
 .skillCard h3{
     padding: 1rem;
+    align-self: center;
     color: white;
 }
 .skillLogo{
-    width: 5.5rem;
-    height: 5.5rem;
+    align-self: center;
+    width: 5rem;
+    height: 5rem;
 }
 .skillLevel{
     display: flex;
+    align-self: center;
     width: fit-content;
     height: fit-content;
 

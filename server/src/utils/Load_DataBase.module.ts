@@ -6,7 +6,7 @@ import { about } from '../entities/about.entity';
 import { contact } from '../entities/contact.entity';
 import { skills } from '../entities/skills.entity';
 import { projects } from '../entities/projects.entity';
-import { OnModuleInit } from '@nestjs/common';
+/*import { OnModuleInit } from '@nestjs/common';*/
 
 
 @Module({
@@ -17,9 +17,10 @@ import { OnModuleInit } from '@nestjs/common';
   providers: [LoadDataBase],
   exports: [LoadDataBase],
 })
-export class LoadDatabaseModule implements OnModuleInit{
+export class LoadDatabaseModule {}
+/*implements OnModuleInit{
   constructor(private firstload: LoadDataBase){ }
   onModuleInit() {
     this.firstload.firstLoad()
   }
-}
+}*/

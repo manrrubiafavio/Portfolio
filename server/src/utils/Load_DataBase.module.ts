@@ -2,10 +2,12 @@ import { Module } from '@nestjs/common';
 import { HttpModule } from '@nestjs/axios';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { LoadDataBase } from './firstload';
-import { about } from '../entities/about.entity'; 
-import { contact } from '../entities/contact.entity'; 
-import { skills } from '../entities/skills.entity'; 
-import { projects } from '../entities/projects.entity'; 
+import { about } from '../entities/about.entity';
+import { contact } from '../entities/contact.entity';
+import { skills } from '../entities/skills.entity';
+import { projects } from '../entities/projects.entity';
+import { OnModuleInit } from '@nestjs/common';
+
 
 @Module({
   imports: [
@@ -15,4 +17,9 @@ import { projects } from '../entities/projects.entity';
   providers: [LoadDataBase],
   exports: [LoadDataBase],
 })
-export class LoadDatabaseModule{}
+export class LoadDatabaseModule implements OnModuleInit{
+  constructor(private firstload: LoadDataBase){ }
+  onModuleInit() {
+    this.firstload.firstLoad()
+  }
+}

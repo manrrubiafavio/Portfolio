@@ -28,8 +28,8 @@ import { LoadDatabaseModule } from './utils/Load_DataBase.module';
       ssl: {
         rejectUnauthorized: false, 
       },
-      synchronize: false,
-      dropSchema: false,
+      synchronize: true,
+      dropSchema: true,
 
 
     }),

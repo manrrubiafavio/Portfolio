@@ -8,6 +8,8 @@ export class projects {
     name: string;
     @Column('text')
     description: string;
+    @Column('text',{array: true, nullable:true})
+    photos: string[];
     @Column({ nullable: true })
     video: string;
     @Column('text', { array: true }) 

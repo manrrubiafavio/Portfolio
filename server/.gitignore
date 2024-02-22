@@ -4,6 +4,7 @@
 
 #enviroment
 .dev.env
+.env
 api.json
 
 # Logs

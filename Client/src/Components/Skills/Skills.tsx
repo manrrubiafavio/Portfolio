@@ -35,7 +35,7 @@ export default function ViewSkills() {
         let pdfUrl = ""
         let link = document.createElement('a');
         if (languageState) {
-            pdfUrl = '/cv/Favio_Manrrubia_v2.pdf';
+            pdfUrl = '/cv/Favio_Manrrubia_desarrollador_Full_Stack.pdf';
             link.download = 'Favio_Manrrubia_CV.pdf'
         } else {
             pdfUrl = '/cv/Favio_Manrrubia_cv_english.pdf';

@@ -33,11 +33,14 @@ export default function Projects() {
         try {
             const response = await axios.get(`${Back_url}/projects/${languageState}`)
             setProjects(response.data)
+            console.log(response.data, 'server 1')
+            
         } catch (error: any) {
             console.error(error.message)
             try {
                 const response = await axios.get(`${Back_url2}/projects/${languageState}`)                
                 setProjects(response.data)
+                console.log('server2', response.data)
             } catch (error) {
                 console.error('Error en los servidores')                
             }

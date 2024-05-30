@@ -11,6 +11,7 @@ export default function Footer(){
     const [contactInfo, setContactInfo] = useState({ "id": 0, "phone": 0, "email": "", "whatsapp": "" });
     const languageState = useSelector((state: RootState) => state.language);
     const Back_Url = process.env.REACT_APP_BACK_URL;
+    const Back_Url2 = process.env.REACT_APP_BACK_URL2;
 
     useEffect(() => {
         getContactInfo();
@@ -20,9 +21,14 @@ export default function Footer(){
         try {
             const response = await axios.get(`${Back_Url}/contact`)
             setContactInfo(response.data[0])
-
         } catch (error:any) {
             console.error(error.message)
+            try {
+                const response = await axios.get(`${Back_Url2}/contact`)
+            setContactInfo(response.data[0])
+            } catch (error) {
+                console.error('Error en los servidores')
+            }
         }
     }
 

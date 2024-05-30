@@ -14,6 +14,7 @@ export default function Home() {
     const languageState = useSelector((state: RootState) => state.language);
     const [about, setAbout] = useState("")
     const Back_Url = process.env.REACT_APP_BACK_URL;
+    const Back_Url2 = process.env.REACT_APP_BACK_URL2;
 
     useEffect(() => {
         getAbout()
@@ -24,10 +25,16 @@ export default function Home() {
 
     const getAbout = async () => {
         try {
-            const response = await axios.get(`${Back_Url}/about/${languageState}`)
+            const response = await axios.get(`${Back_Url2}/about/${languageState}`)
             setAbout(response.data[0].text);
         } catch (error) {
-            console.error('Server error')
+            console.error('Error en el servidor principal, intentando con el servidor de respaldo');
+            try {
+                const response = await axios.get(`${Back_Url}/about/${languageState}`);
+                setAbout(response.data[0].text);
+            } catch (backupError) {
+                console.error('Error en el servidor de respaldo también');
+            }
         }
     }
 

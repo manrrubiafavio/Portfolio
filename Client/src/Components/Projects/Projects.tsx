@@ -19,6 +19,7 @@ interface Project {
 export default function Projects() {
     const [projects, setProjects] = useState<Project[]>([]);
     const Back_url = process.env.REACT_APP_BACK_URL;
+    const Back_url2 = process.env.REACT_APP_BACK_URL2;    
     const languageState = useSelector((state: RootState) => state.language);
 
     useEffect(() => {
@@ -34,6 +35,12 @@ export default function Projects() {
             setProjects(response.data)
         } catch (error: any) {
             console.error(error.message)
+            try {
+                const response = await axios.get(`${Back_url2}/projects/${languageState}`)                
+                setProjects(response.data)
+            } catch (error) {
+                console.error('Error en los servidores')                
+            }
         }
     }
 

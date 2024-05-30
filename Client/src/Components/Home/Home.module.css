@@ -87,9 +87,9 @@
 
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-device-width: 768px) and (orientation: portrait){
     .divcontainer {
-        grid-template-columns: 1fr;
+        flex-direction: column;
         margin-top: 5rem;
     }
 
@@ -102,9 +102,9 @@
     }
 
     .image {
-        position: relative;
-        width: auto;
-        height: auto;
+        position:relative;
+        width: 100vw;
+        height: 100vh;
         box-shadow: none;
     }
 
